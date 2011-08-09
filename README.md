@@ -1,6 +1,6 @@
 # CursorInspector
 
-![]CursorInspectorScreenshot.png)
+![](http://github.com/invariant/CursorInspector/raw/master/CursorInspectorScreenshot.png )
 
 Displays a window with the following information:
 
