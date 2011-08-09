@@ -10,3 +10,5 @@ Displays a window with the following information:
 * SuperFastHash value
 
 Buttons to copy the current image and the two hashes to the clipboard are provided.
+
+The current cursor details will not be updated while the Fn key is held down.
