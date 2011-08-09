@@ -1,5 +1,7 @@
 # CursorInspector
 
+![]CursorInspectorScreenshot.png)
+
 Displays a window with the following information:
 
 * Current system cursor image
