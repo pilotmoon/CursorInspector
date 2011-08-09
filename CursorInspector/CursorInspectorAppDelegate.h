@@ -20,4 +20,7 @@
 @property (assign) IBOutlet NSImage *image;
 @property (assign) BOOL fnDown;
 
+- (void)copyString:(NSString *)string;
+- (IBAction)copyButton:(id)sender;
+
 @end

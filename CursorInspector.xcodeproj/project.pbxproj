@@ -259,7 +259,8 @@
 		2775082213F15918001DCE91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = CursorInspector/CursorInspector.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CursorInspector/CursorInspector-Prefix.pch";
 				INFOPLIST_FILE = "CursorInspector/CursorInspector-Info.plist";
@@ -271,7 +272,8 @@
 		2775082313F15918001DCE91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = CursorInspector/CursorInspector.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CursorInspector/CursorInspector-Prefix.pch";
 				INFOPLIST_FILE = "CursorInspector/CursorInspector-Info.plist";
@@ -299,6 +301,7 @@
 				2775082313F15918001DCE91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

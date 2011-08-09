@@ -15,6 +15,7 @@
 
 - (void)timerRoutine
 {
+    //[NSEvent mouseLocation]
     if (!self.fnDown) {
         NSCursor *c=[NSCursor currentSystemCursor];
         self.quickHash=[[NSNumber numberWithUnsignedInteger:[c quickHash]] stringValue];
@@ -24,16 +25,55 @@
     }
 }
 
+- (void)handleEvent:(NSEvent *)event
+{
+    self.fnDown=([event modifierFlags]&NSFunctionKeyMask)!=0;
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [NSEvent addGlobalMonitorForEventsMatchingMask:NSFlagsChangedMask handler:^(NSEvent *event){
-        self.fnDown=([event modifierFlags]&NSFunctionKeyMask)!=0;
-        NSLog(@"boo %d", self.fnDown);
+    [NSEvent addGlobalMonitorForEventsMatchingMask:NSFlagsChangedMask|NSLeftMouseUp handler:^(NSEvent *event){
+        [self handleEvent:event];
+    }];
+    [NSEvent addLocalMonitorForEventsMatchingMask:NSFlagsChangedMask|NSLeftMouseUp handler:^(NSEvent *event){
+        [self handleEvent:event];
+        return event;
     }];
      
     [window setLevel:NSFloatingWindowLevel];
-    // Insert code here to initialize your application
+
     timer=[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerRoutine) userInfo:0 repeats:YES];
+}
+
+- (void)copyString:(NSString *)string
+{
+    NSPasteboard *pboard=[NSPasteboard generalPasteboard];
+    [pboard clearContents];
+    [pboard setData:[string dataUsingEncoding:NSUTF8StringEncoding] forType:NSPasteboardTypeString];
+}
+
+- (void)copyImage:(NSImage *)img
+{
+    NSPasteboard *pboard=[NSPasteboard generalPasteboard];
+    [pboard clearContents];
+    [pboard setData:[img TIFFRepresentation] forType:NSPasteboardTypeTIFF];
+}
+
+- (void)copyButton:(id)sender
+{
+    switch ([sender tag]) {
+        case 1:
+            [self copyString:self.quickHash];
+            break;
+        case 2:
+            [self copyString:self.superFastHash];
+            break;
+        case 3:
+            [self copyImage:self.image];
+            break;
+        default:
+            break;
+    }
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
