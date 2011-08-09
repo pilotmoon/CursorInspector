@@ -13,6 +13,8 @@
 		2775081813F15917001DCE91 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2775081613F15917001DCE91 /* Credits.rtf */; };
 		2775081B13F15917001DCE91 /* CursorInspectorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2775081A13F15917001DCE91 /* CursorInspectorAppDelegate.m */; };
 		2775081E13F15918001DCE91 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2775081C13F15918001DCE91 /* MainMenu.xib */; };
+		2775082913F15BB8001DCE91 /* NMCursorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2775082613F15BB8001DCE91 /* NMCursorUtils.m */; };
+		2775082A13F15BB8001DCE91 /* NMSuperFastHash.c in Sources */ = {isa = PBXBuildFile; fileRef = 2775082713F15BB8001DCE91 /* NMSuperFastHash.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +23,19 @@
 		2775080A13F15916001DCE91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		2775080B13F15916001DCE91 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2775080C13F15916001DCE91 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2775080F13F15917001DCE91 /* CursorInspector-Info.plist */ = {isa = PBXFileReference; path = "CursorInspector-Info.plist"; sourceTree = "<group>"; };
+		2775080F13F15917001DCE91 /* CursorInspector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CursorInspector-Info.plist"; sourceTree = "<group>"; };
 		2775081113F15917001DCE91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2775081313F15917001DCE91 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2775081513F15917001DCE91 /* CursorInspector-Prefix.pch */ = {isa = PBXFileReference; path = "CursorInspector-Prefix.pch"; sourceTree = "<group>"; };
+		2775081513F15917001DCE91 /* CursorInspector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CursorInspector-Prefix.pch"; sourceTree = "<group>"; };
 		2775081713F15917001DCE91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		2775081913F15917001DCE91 /* CursorInspectorAppDelegate.h */ = {isa = PBXFileReference; path = CursorInspectorAppDelegate.h; sourceTree = "<group>"; };
+		2775081913F15917001DCE91 /* CursorInspectorAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CursorInspectorAppDelegate.h; sourceTree = "<group>"; };
 		2775081A13F15917001DCE91 /* CursorInspectorAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CursorInspectorAppDelegate.m; sourceTree = "<group>"; };
 		2775081D13F15918001DCE91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2775082413F15924001DCE91 /* CursorInspector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CursorInspector.entitlements; sourceTree = "<group>"; };
+		2775082513F15BB8001DCE91 /* NMCursorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NMCursorUtils.h; path = NMKit/NMKit/NMCursorUtils.h; sourceTree = SOURCE_ROOT; };
+		2775082613F15BB8001DCE91 /* NMCursorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NMCursorUtils.m; path = NMKit/NMKit/NMCursorUtils.m; sourceTree = SOURCE_ROOT; };
+		2775082713F15BB8001DCE91 /* NMSuperFastHash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = NMSuperFastHash.c; path = NMKit/NMKit/NMSuperFastHash.c; sourceTree = SOURCE_ROOT; };
+		2775082813F15BB8001DCE91 /* NMSuperFastHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NMSuperFastHash.h; path = NMKit/NMKit/NMSuperFastHash.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +89,11 @@
 		2775080D13F15916001DCE91 /* CursorInspector */ = {
 			isa = PBXGroup;
 			children = (
+				2775082513F15BB8001DCE91 /* NMCursorUtils.h */,
+				2775082613F15BB8001DCE91 /* NMCursorUtils.m */,
+				2775082713F15BB8001DCE91 /* NMSuperFastHash.c */,
+				2775082813F15BB8001DCE91 /* NMSuperFastHash.h */,
+				2775082413F15924001DCE91 /* CursorInspector.entitlements */,
 				2775081913F15917001DCE91 /* CursorInspectorAppDelegate.h */,
 				2775081A13F15917001DCE91 /* CursorInspectorAppDelegate.m */,
 				2775081C13F15918001DCE91 /* MainMenu.xib */,
@@ -164,6 +176,8 @@
 			files = (
 				2775081413F15917001DCE91 /* main.m in Sources */,
 				2775081B13F15917001DCE91 /* CursorInspectorAppDelegate.m in Sources */,
+				2775082913F15BB8001DCE91 /* NMCursorUtils.m in Sources */,
+				2775082A13F15BB8001DCE91 /* NMSuperFastHash.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +259,7 @@
 		2775082213F15918001DCE91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CursorInspector/CursorInspector-Prefix.pch";
 				INFOPLIST_FILE = "CursorInspector/CursorInspector-Info.plist";
@@ -256,6 +271,7 @@
 		2775082313F15918001DCE91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CursorInspector/CursorInspector-Prefix.pch";
 				INFOPLIST_FILE = "CursorInspector/CursorInspector-Info.plist";

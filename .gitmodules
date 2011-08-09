@@ -1,0 +1,3 @@
+[submodule "NMKit"]
+	path = NMKit
+	url = /Users/nim305/Dropbox/private/source/NMKit.git/
