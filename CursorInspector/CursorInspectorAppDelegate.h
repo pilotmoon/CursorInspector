@@ -17,6 +17,7 @@
 @property (assign) IBOutlet NSString *quickHash;
 @property (assign) IBOutlet NSString *superFastHash;
 @property (assign) IBOutlet NSString *dimensions;
+@property (assign) IBOutlet NSString *analysisResult;
 @property (assign) IBOutlet NSImage *image;
 @property (assign) BOOL fnDown;
 

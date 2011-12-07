@@ -8,10 +8,11 @@
 
 #import "CursorInspectorAppDelegate.h"
 #import "NMCursorUtils.h"
+#import "AnalyseCursor.h"
 
 @implementation CursorInspectorAppDelegate
 
-@synthesize window, quickHash, superFastHash, dimensions, fnDown, image;
+@synthesize window, quickHash, superFastHash, dimensions, fnDown, image, analysisResult;
 
 - (void)timerRoutine
 {
@@ -22,6 +23,7 @@
         self.superFastHash=[[NSNumber numberWithUnsignedInteger:[c superFastHash]] stringValue];
         self.image=[c image];
         self.dimensions=[NSString stringWithFormat:@"%.0f x %.0f", self.image.size.width, self.image.size.height];
+        self.analysisResult=[AnalyseCursor analyseCursorImage:[c image]]?@"YES":@"NO";
     }
 }
 

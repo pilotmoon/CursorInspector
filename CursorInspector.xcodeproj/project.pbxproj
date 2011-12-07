@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		01474735148F87FF0090E8E3 /* NMCursorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 01474730148F87FF0090E8E3 /* NMCursorUtils.m */; };
 		01474736148F87FF0090E8E3 /* NMSuperFastHash.c in Sources */ = {isa = PBXBuildFile; fileRef = 01474731148F87FF0090E8E3 /* NMSuperFastHash.c */; };
-		01474737148F87FF0090E8E3 /* regex.rb in Resources */ = {isa = PBXBuildFile; fileRef = 01474734148F87FF0090E8E3 /* regex.rb */; };
+		0147473A148F893A0090E8E3 /* AnalyseCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01474739148F893A0090E8E3 /* AnalyseCursor.m */; };
 		2775080813F15916001DCE91 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2775080713F15916001DCE91 /* Cocoa.framework */; };
 		2775081213F15917001DCE91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2775081013F15917001DCE91 /* InfoPlist.strings */; };
 		2775081413F15917001DCE91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2775081313F15917001DCE91 /* main.m */; };
@@ -23,7 +23,8 @@
 		01474730148F87FF0090E8E3 /* NMCursorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NMCursorUtils.m; path = ../../pc/NMKit/NMKit/NMCursorUtils.m; sourceTree = "<group>"; };
 		01474731148F87FF0090E8E3 /* NMSuperFastHash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = NMSuperFastHash.c; path = ../../pc/NMKit/NMKit/NMSuperFastHash.c; sourceTree = "<group>"; };
 		01474732148F87FF0090E8E3 /* NMSuperFastHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NMSuperFastHash.h; path = ../../pc/NMKit/NMKit/NMSuperFastHash.h; sourceTree = "<group>"; };
-		01474734148F87FF0090E8E3 /* regex.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = regex.rb; sourceTree = "<group>"; };
+		01474738148F893A0090E8E3 /* AnalyseCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyseCursor.h; sourceTree = "<group>"; };
+		01474739148F893A0090E8E3 /* AnalyseCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalyseCursor.m; sourceTree = "<group>"; };
 		2775080313F15916001DCE91 /* CursorInspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CursorInspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2775080713F15916001DCE91 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2775080A13F15916001DCE91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -52,15 +53,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01474733148F87FF0090E8E3 /* script */ = {
-			isa = PBXGroup;
-			children = (
-				01474734148F87FF0090E8E3 /* regex.rb */,
-			);
-			name = script;
-			path = ../../pc/script;
-			sourceTree = "<group>";
-		};
 		277507F813F15916001DCE91 = {
 			isa = PBXGroup;
 			children = (
@@ -104,12 +96,13 @@
 				01474730148F87FF0090E8E3 /* NMCursorUtils.m */,
 				01474731148F87FF0090E8E3 /* NMSuperFastHash.c */,
 				01474732148F87FF0090E8E3 /* NMSuperFastHash.h */,
-				01474733148F87FF0090E8E3 /* script */,
 				2775082413F15924001DCE91 /* CursorInspector.entitlements */,
 				2775081913F15917001DCE91 /* CursorInspectorAppDelegate.h */,
 				2775081A13F15917001DCE91 /* CursorInspectorAppDelegate.m */,
 				2775081C13F15918001DCE91 /* MainMenu.xib */,
 				2775080E13F15916001DCE91 /* Supporting Files */,
+				01474738148F893A0090E8E3 /* AnalyseCursor.h */,
+				01474739148F893A0090E8E3 /* AnalyseCursor.m */,
 			);
 			path = CursorInspector;
 			sourceTree = "<group>";
@@ -179,7 +172,6 @@
 				2775081213F15917001DCE91 /* InfoPlist.strings in Resources */,
 				2775081813F15917001DCE91 /* Credits.rtf in Resources */,
 				2775081E13F15918001DCE91 /* MainMenu.xib in Resources */,
-				01474737148F87FF0090E8E3 /* regex.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +186,7 @@
 				2775081B13F15917001DCE91 /* CursorInspectorAppDelegate.m in Sources */,
 				01474735148F87FF0090E8E3 /* NMCursorUtils.m in Sources */,
 				01474736148F87FF0090E8E3 /* NMSuperFastHash.c in Sources */,
+				0147473A148F893A0090E8E3 /* AnalyseCursor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +235,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -262,6 +256,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -280,6 +275,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CursorInspector/CursorInspector-Prefix.pch";
 				INFOPLIST_FILE = "CursorInspector/CursorInspector-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -293,6 +289,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CursorInspector/CursorInspector-Prefix.pch";
 				INFOPLIST_FILE = "CursorInspector/CursorInspector-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
