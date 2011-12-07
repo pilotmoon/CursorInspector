@@ -1,0 +1,3 @@
+[submodule "NMKit"]
+	path = NMKit
+	url = git@github.com:invariant/NMKit.git
